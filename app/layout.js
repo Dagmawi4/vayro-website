@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Vayro – AI-Powered Travel Planner",
   description:
-    "Plan end-to-end trips effortlessly with Vayro — AI-powered travel planner combining flights, stays, and personalized itineraries in one place.",
+    "Plan end-to-end trips effortlessly with Vayro — an AI-powered travel planner that combines flights, stays, and personalized itineraries in one place.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "Vayro",
     images: [
       {
-        url: "/og-image.png", // Optional: add og-image.png in your /public folder
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Vayro – AI-Powered Travel Planner",
@@ -35,6 +35,14 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vayro – AI-Powered Travel Planner",
+    description:
+      "Your AI-powered travel planner for seamless trips — flights, stays, and itineraries all in one place.",
+    images: ["/og-image.png"],
+  },
+  metadataBase: new URL("https://www.vayro.org"),
 };
 
 export default function RootLayout({ children }) {
