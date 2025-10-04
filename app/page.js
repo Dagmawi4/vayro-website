@@ -94,38 +94,40 @@ export default function Home() {
 {/* ===== Demo ===== */}
       <section id="demo" className="py-24 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+          {/* Text content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold">See it in action</h2>
             <p className="mt-3 text-gray-600">
               Watch Vayro build a personalized trip plan in seconds — from flights to a day-by-day itinerary. 
               <span className="block mt-1 text-sm text-gray-500">
-                Updated demo with new added features coming soon.
+                Updated demo with new features and improved AI recommendations.
               </span>
             </p>
+
             <div className="mt-6 flex gap-3 flex-wrap">
               <a
-                href="https://youtu.be/SGREbf6FTTA"
+                href="https://youtu.be/O2mRxSni3Xo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex rounded-xl bg-blue-600 text-white px-5 py-3 font-semibold hover:bg-blue-700"
+                className="inline-flex rounded-xl bg-blue-600 text-white px-5 py-3 font-semibold hover:bg-blue-700 transition-colors"
               >
                 Watch Extended Demo on YouTube
               </a>
               <a
                 href="#waitlist"
-                className="inline-flex rounded-xl border border-blue-200 text-blue-700 px-5 py-3 font-semibold hover:bg-blue-50"
+                className="inline-flex rounded-xl border border-blue-200 text-blue-700 px-5 py-3 font-semibold hover:bg-blue-50 transition-colors"
               >
                 Get Early Access
               </a>
             </div>
           </div>
 
-          {/* Embedded YouTube Short (59 sec) */}
+          {/* Embedded YouTube Short (1 min demo) */}
           <div className="relative rounded-3xl shadow-xl overflow-hidden aspect-[9/16] max-w-sm mx-auto">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/EqNFE0vnUqs"
-              title="Vayro Demo Video"
+              src="https://www.youtube.com/embed/HEC-FXxMO7o"
+              title="Vayro 1-Minute Demo"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -342,6 +344,16 @@ export default function Home() {
                     className="hover:text-white"
                   >
                     X (Twitter)
+                  </a>
+                </li>
+                <li>
+                  <a
+                      href="https://www.youtube.com/@Vayroapp"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white"
+                  >
+                    YouTube
                   </a>
                 </li>
               </ul>
