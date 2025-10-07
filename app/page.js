@@ -22,8 +22,8 @@ export default function Home() {
               Your Gateway to <span className="text-blue-600">Smarter Travel</span>
             </h1>
             <p className="mt-5 text-lg text-gray-600 max-w-xl">
-              Vayro plans end-to-end trips — flights, lodging, transport and
-              personalized itineraries — in one place. No more juggling apps.
+              Vayro plans end-to-end trips flights, lodging, transport and
+              personalized itineraries in one place. No more juggling apps.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
