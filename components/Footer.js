@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -22,19 +24,19 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-2">Company</h4>
           <ul className="space-y-1 text-sm">
             <li>
-              <a href="/about" className="hover:text-white transition">
+              <Link href="/about" className="hover:text-white transition">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#features" className="hover:text-white transition">
+              <Link href="/#features" className="hover:text-white transition">
                 Features
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#coming-soon" className="hover:text-white transition">
+              <Link href="/#coming-soon" className="hover:text-white transition">
                 Coming Soon
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -91,14 +93,14 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-2">Legal</h4>
           <ul className="space-y-1 text-sm">
             <li>
-              <a href="/terms" className="hover:text-white transition">
+              <Link href="/terms" className="hover:text-white transition">
                 Terms of Service
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-white transition">
+              <Link href="/privacy" className="hover:text-white transition">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
           <p className="mt-6 text-xs text-gray-500">contact@vayro.org</p>
