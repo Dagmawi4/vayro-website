@@ -22,7 +22,7 @@ export default function PrivacyPage() {
     { id: "retention", title: "Data Retention" },
     { id: "security", title: "Security" },
     { id: "your-rights", title: "Your Privacy Rights" },
-    { id: "children", title: "Children's Privacy" },
+    { id: "children", title: "Children&apos;s Privacy" },
     { id: "intl", title: "International Transfers" },
     { id: "links", title: "Third-Party Links" },
     { id: "changes", title: "Changes to This Policy" },
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
 
       <section className="max-w-6xl mx-auto px-6 pb-24">
         <div className="grid lg:grid-cols-12 gap-10">
-          {/* TOC (desktop) */}
+          {/* TOC */}
           <aside className="hidden lg:block lg:col-span-3">
             <div className="sticky top-24 rounded-2xl border border-gray-100 bg-white shadow-sm p-5">
               <h3 className="text-sm font-semibold text-gray-900 mb-3">On this page</h3>
@@ -63,9 +63,9 @@ export default function PrivacyPage() {
               {/* Intro */}
               <section id="intro" className="scroll-mt-28">
                 <p className="text-gray-700 leading-relaxed">
-                  This Privacy Policy explains how <span className="font-semibold">Vayro</span> (“we,” “us,” or “our”)
+                  This Privacy Policy explains how <span className="font-semibold">Vayro</span> (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;)
                   collects, uses, discloses, and protects information about you when you use our website, mobile
-                  applications, and related services (collectively, the “Service”). We value your trust and are committed
+                  applications, and related services (collectively, the &quot;Service&quot;). We value your trust and are committed
                   to handling your data responsibly and transparently.
                 </p>
               </section>
@@ -74,9 +74,9 @@ export default function PrivacyPage() {
               <section id="scope" className="scroll-mt-28">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">Scope</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  This policy applies to all users of the Service worldwide. Additional disclosures may apply to you
-                  depending on your region (e.g., EEA/UK GDPR, California CCPA/CPRA). Where local law requires, we will
-                  honor those additional rights and obligations.
+                  This policy applies to all users of the Service worldwide. Additional disclosures may apply depending
+                  on your region (e.g., EEA/UK GDPR, California CCPA/CPRA). Where local law requires, we will honor those
+                  additional rights and obligations.
                 </p>
               </section>
 
@@ -85,15 +85,15 @@ export default function PrivacyPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">Information We Collect</h2>
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
                   <li>
-                    <span className="font-medium">Account & Contact Information:</span> email, name (if provided),
+                    <span className="font-medium">Account &amp; Contact Information:</span> email, name (if provided),
                     authentication details, and communication preferences.
                   </li>
                   <li>
-                    <span className="font-medium">Profile & Trip Preferences:</span> travel style, interests, budget,
+                    <span className="font-medium">Profile &amp; Trip Preferences:</span> travel style, interests, budget,
                     accessibility or dietary needs, preferred airlines or lodging types, group composition.
                   </li>
                   <li>
-                    <span className="font-medium">Usage & Device Data:</span> pages viewed, features used, app settings,
+                    <span className="font-medium">Usage &amp; Device Data:</span> pages viewed, features used, app settings,
                     IP address, device type, operating system, browser, session metadata, crash logs, and performance data.
                   </li>
                   <li>
@@ -115,15 +115,14 @@ export default function PrivacyPage() {
               <section id="sources" className="scroll-mt-28">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">Sources of Information</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  We collect information directly from you, automatically through your device when you use the Service,
-                  and from trusted partners (e.g., mapping, booking, travel data providers) to enable accurate planning
-                  and up-to-date recommendations.
+                  We collect information directly from you, automatically through your device, and from trusted partners
+                  (e.g., mapping, booking, travel data providers) to enable accurate planning and up-to-date recommendations.
                 </p>
               </section>
 
               {/* Cookies */}
               <section id="cookies" className="scroll-mt-28">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Cookies & Similar Technologies</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Cookies &amp; Similar Technologies</h2>
                 <p className="text-gray-700 leading-relaxed mb-3">
                   We use cookies, local storage, and similar technologies to keep you signed in, remember preferences,
                   measure performance, and understand how the Service is used. You can control cookies via your browser
@@ -169,22 +168,18 @@ export default function PrivacyPage() {
                   We do not sell your personal information. We may share limited data with:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                  <li><span className="font-medium">Service providers & processors</span> who help us host, analyze, and deliver the Service under contractual confidentiality.</li>
-                  <li><span className="font-medium">Travel partners / APIs</span> (e.g., flight, lodging, maps) when needed to surface availability, prices, or routes.</li>
-                  <li><span className="font-medium">Legal & safety</span> when required by law or to protect users, our platform, or the public.</li>
+                  <li><span className="font-medium">Service providers &amp; processors</span> who help us host, analyze, and deliver the Service under confidentiality agreements.</li>
+                  <li><span className="font-medium">Travel partners / APIs</span> (e.g., flight, lodging, maps) when needed to show availability, prices, or routes.</li>
+                  <li><span className="font-medium">Legal &amp; safety</span> when required by law or to protect users, our platform, or the public.</li>
                   <li><span className="font-medium">Business transfers</span> in the event of a merger, acquisition, or reorganization, subject to this Policy.</li>
                 </ul>
               </section>
 
               {/* AI */}
               <section id="ai" className="scroll-mt-28">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">AI Processing & Outputs</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">AI Processing &amp; Outputs</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  Our recommendations may be generated with AI using inputs you provide and data from partners. We apply
-                  safeguards to reduce bias and hallucinations, but AI outputs may not always be accurate or complete.
-                  Do not rely on AI content for critical decisions without verifying with official sources. We do not
-                  use your personal content to train public models; if we fine-tune internal models, we do so with
-                  privacy controls and access restrictions.
+                  Our recommendations may be generated with AI using your inputs and partner data. We apply safeguards to reduce bias and inaccuracies, but AI outputs may not always be perfect. Do not rely on AI content for critical decisions without verifying with official sources. We do not use your personal content to train public models; if we fine-tune internal models, we do so with strict privacy controls.
                 </p>
               </section>
 
@@ -194,7 +189,7 @@ export default function PrivacyPage() {
                 <p className="text-gray-700 leading-relaxed">
                   We retain personal data only for as long as necessary to provide the Service, comply with legal
                   obligations, resolve disputes, and enforce our agreements. Retention periods vary by data type and
-                  our operational needs.
+                  operational needs.
                 </p>
               </section>
 
@@ -202,9 +197,9 @@ export default function PrivacyPage() {
               <section id="security" className="scroll-mt-28">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">Security</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  We use administrative, technical, and physical safeguards to help protect your information, including
-                  encryption in transit, access controls, and monitoring. However, no method of transmission or storage
-                  is completely secure, and we cannot guarantee absolute security.
+                  We use administrative, technical, and physical safeguards to protect your information, including
+                  encryption, access controls, and monitoring. However, no method of transmission or storage is
+                  completely secure, and we cannot guarantee absolute protection.
                 </p>
               </section>
 
@@ -230,7 +225,7 @@ export default function PrivacyPage() {
 
               {/* Children */}
               <section id="children" className="scroll-mt-28">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Children's Privacy</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Children&apos;s Privacy</h2>
                 <p className="text-gray-700 leading-relaxed">
                   The Service is not directed to children under the age required by local law (e.g., 13 in the U.S.,
                   16 in parts of the EEA). We do not knowingly collect personal information from children. If we learn
@@ -238,13 +233,13 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              {/* International */}
+              {/* Intl */}
               <section id="intl" className="scroll-mt-28">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">International Transfers</h2>
                 <p className="text-gray-700 leading-relaxed">
                   We may process and store information in countries other than where you live. When we transfer personal
-                  data internationally, we use appropriate safeguards such as Standard Contractual Clauses or equivalent
-                  mechanisms, as required by applicable law.
+                  data internationally, we use safeguards such as Standard Contractual Clauses or equivalent mechanisms
+                  required by applicable law.
                 </p>
               </section>
 
@@ -253,7 +248,7 @@ export default function PrivacyPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">Third-Party Links</h2>
                 <p className="text-gray-700 leading-relaxed">
                   Our Service may link to third-party sites or services. We are not responsible for their privacy
-                  practices. We encourage you to review the privacy policies of any third-party services you use.
+                  practices and encourage you to review their policies before using them.
                 </p>
               </section>
 
@@ -261,9 +256,9 @@ export default function PrivacyPage() {
               <section id="changes" className="scroll-mt-28">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">Changes to This Policy</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  We may update this Privacy Policy periodically. If changes are material, we will provide reasonable
-                  notice (for example, by updating the “Last updated” date or via in-product messaging). Your continued
-                  use of the Service after changes take effect signifies acceptance of the updated policy.
+                  We may update this Privacy Policy periodically. If changes are material, we will provide notice (e.g.,
+                  by updating the &quot;Last updated&quot; date or via in-product messaging). Your continued use of the
+                  Service after changes take effect signifies acceptance of the updated policy.
                 </p>
               </section>
 
@@ -289,4 +284,5 @@ export default function PrivacyPage() {
     </div>
   );
 }
+
 
