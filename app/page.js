@@ -1,15 +1,12 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { useState } from "react";
 
 export default function Home() {
-  const [openFAQ, setOpenFAQ] = useState(null); // ✅ works in plain JS
+  const [openFAQ, setOpenFAQ] = useState(null);
 
   return (
     <main className="bg-white text-gray-900">
-      <Navbar />
-
       {/* ===== Hero / Home ===== */}
       <section id="home" className="relative pt-28 md:pt-32">
         <div className="absolute -z-10 inset-0 bg-gradient-to-b from-blue-50 to-white" />
@@ -22,8 +19,8 @@ export default function Home() {
               Your Gateway to <span className="text-blue-600">Smarter Travel</span>
             </h1>
             <p className="mt-5 text-lg text-gray-600 max-w-xl">
-              Vayro plans end-to-end trips flights, lodging, transport and
-              personalized itineraries in one place. No more juggling apps.
+              Vayro plans end-to-end trips — flights, lodging, transport, and
+              personalized itineraries — all in one place. No more juggling apps.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
@@ -40,16 +37,14 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-6 text-sm text-gray-500">
-              Built with OpenAI, Amadeus, Google Places and more.
+              Built with OpenAI, Amadeus, Google Places, and more.
             </div>
           </div>
 
           {/* iPhone Mockup */}
           <div className="relative mx-auto w-full max-w-sm">
             <div className="relative rounded-[3rem] border-8 border-black bg-black shadow-2xl overflow-hidden">
-              {/* iPhone notch */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-black rounded-b-2xl z-20"></div>
-              {/* Screenshot */}
               <img
                 src="/homepage-phone.jpg"
                 alt="Vayro App Screenshot"
@@ -91,10 +86,9 @@ export default function Home() {
         </div>
       </section>
 
-{/* ===== Demo ===== */}
+      {/* ===== Demo ===== */}
       <section id="demo" className="py-24 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-          {/* Text content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold">See it in action</h2>
             <p className="mt-3 text-gray-600">
@@ -122,7 +116,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Embedded YouTube Short (1 min demo) */}
           <div className="relative rounded-3xl shadow-xl overflow-hidden aspect-[9/16] max-w-sm mx-auto">
             <iframe
               className="w-full h-full"
@@ -136,8 +129,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* ===== FAQ ===== */}
       <section id="faq" className="py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -150,28 +141,13 @@ export default function Home() {
               { q: "How does Vayro create itineraries?", a: "We combine your inputs with real-time data from Amadeus, Google Places, and more — then AI builds a day-by-day tailored plan with budgets and schedules." },
               { q: "Can I book flights and hotels directly in Vayro?", a: "Currently, Vayro provides personalized recommendations with direct links to airlines and hotels. The ability to book directly in the app is coming soon."},
               { q: "Does Vayro work for group trips?", a: "Absolutely. You can add multiple travelers, and Vayro will create itineraries tailored to the entire group’s preferences."},
-              {
-                q: "Can Vayro handle special requirements like dietary needs or accessibility?",
-                a: "Yes. You can specify preferences and restrictions, and Vayro will prioritize options that match your needs."
-              },
-              {
-                q: "Do I need an internet connection to use Vayro?",
-                a: "Core features require internet, but you can download your full itinerary as a PDF for offline access."
-              },
-              {
-                q: "Will Vayro sync with my calendar?",
-                a: "Yes. Integration with Google Calendar, Outlook, and others will be supported soon."
-              },
-              {
-                q: "What happens to my data?",
-                a: "Your data is private and only used to improve your travel recommendations. We never sell your personal data."
-              },
-              {
-                q: "Do you track my location?",
-                a: "Only if you allow it. Location access helps improve transport suggestions and nearby activity recommendations."
-              },
-              { q: "When is the launch?", a: "Private beta is coming soon. Join the waitlist to get invited first." },
-              { q: "What makes Vayro different than other travel apps like expedia, hopper or Google Flights?", a: "Unlike traditional platforms that push affiliate deals, Vayro only generates recommendations based on your preferences—making it hyper-personalized and unbiased" }
+              { q: "Can Vayro handle special requirements like dietary needs or accessibility?", a: "Yes. You can specify preferences and restrictions, and Vayro will prioritize options that match your needs."},
+              { q: "Do I need an internet connection to use Vayro?", a: "Core features require internet, but you can download your full itinerary as a PDF for offline access."},
+              { q: "Will Vayro sync with my calendar?", a: "Yes. Integration with Google Calendar, Outlook, and others will be supported soon."},
+              { q: "What happens to my data?", a: "Your data is private and only used to improve your travel recommendations. We never sell your personal data."},
+              { q: "Do you track my location?", a: "Only if you allow it. Location access helps improve transport suggestions and nearby activity recommendations."},
+              { q: "When is the launch?", a: "Private beta is coming soon. Join the waitlist to get invited first."},
+              { q: "What makes Vayro different than other travel apps like expedia, hopper or Google Flights?", a: "Unlike traditional platforms that push affiliate deals, Vayro only generates recommendations based on your preferences—making it hyper-personalized and unbiased." }
             ].map((item, i) => (
               <div key={i} className="border border-gray-200 rounded-xl shadow-sm">
                 <button
@@ -227,7 +203,7 @@ export default function Home() {
           <form
             className="mt-6 flex flex-col sm:flex-row gap-3 justify-center"
             method="POST"
-            action="https://formspree.io/f/mldpnynw" // ✅ your unique Formspree endpoint
+            action="https://formspree.io/f/mldpnynw"
           >
             <input
               required
@@ -248,130 +224,13 @@ export default function Home() {
           </p>
         </div>
       </section>
+    </main>
+  );
+}
 
 
-      {/* ===== About ===== */}
-      <section id="about" className="py-24">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold">
-            About <span className="text-blue-600">Vayro</span>
-          </h2>
-          <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            The idea of Vayro was born during my third trip to Las Vegas. Unlike my
-            previous visits, which were mainly for conferences, this time I wanted to
-            truly explore the city. Las Vegas is overflowing with things to do, but
-            without an organized, personalized, and accurate travel guide, I found
-            myself overwhelmed.{" "}
-            <br /><br />
-            What should have been an exciting adventure turned into a stressful
-            experience of juggling multiple apps, YouTube videos, TikToks, and random
-            websites. Instead of enjoying my trip, I spent most of my energy trying to
-            figure out what to do, until it became exhausting. While I managed to see
-            a few places, I returned home realizing there had to be a better way.{" "}
-            <br /><br />
-            From that reflection, the idea of Vayro was born. I wanted an app that
-            would allow me to simply land in a city and start enjoying, without the
-            stress of logistics. Even in its name, “Vayro” — a blend of “Voyage” and
-            “Aero” — symbolizes travel and exploration powered by intelligence.{" "}
-            <br /><br />
-            From the start, I promised one thing: Vayro will never be just another
-            travel app prioritizing affiliates. It will always put travelers first —
-            saving their time, energy, and mood by making planning effortless. Travel,
-            especially vacations, should be about enjoying the journey, not stressing
-            over the details. That is our mission: to transform trip planning into a
-            seamless, personalized experience that lets you focus on creating memories.
-          </p>
-        </div>
-      </section>
 
-
-      {/* ===== Footer ===== */}
-      <footer className="bg-gray-900 text-gray-300">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-8">
-          {/* Logo + Description */}
-          <div>
-            <div className="flex items-center gap-2">
-              <img
-                src="/vayro-logo.png" // ✅ your uploaded logo inside /public
-                alt="Vayro Logo"
-                className="h-8 w-8 object-contain"
-              />
-              <span className="font-semibold text-white text-lg">Vayro</span>
-            </div>
-            <p className="mt-4 text-sm text-gray-400 max-w-xs">
-              The AI-powered travel planner built for explorers, dreamers, and everyday travelers.
-            </p>
-          </div>
-
-          {/* Navigation */}
-          <div className="grid grid-cols-2 gap-6 text-sm">
-            <div>
-              <h4 className="text-white font-semibold mb-2">Company</h4>
-              <ul className="space-y-1">
-                <li><a href="#about" className="hover:text-white">About</a></li>
-                <li><a href="#features" className="hover:text-white">Features</a></li>
-                <li><a href="#coming-soon" className="hover:text-white">Coming Soon</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-2">Connect</h4>
-              <ul className="space-y-1">
-                <li>
-                  <a 
-                    href="https://www.linkedin.com/company/vayro/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.instagram.com/vayroapp/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white"
-                  >
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://x.com/Vayro787826" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white"
-                  >
-                    X (Twitter)
-                  </a>
-                </li>
-                <li>
-                  <a
-                      href="https://www.youtube.com/@Vayroapp"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white"
-                  >
-                    YouTube
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Rights + Contact */}
-          <div className="flex flex-col items-start md:items-end justify-between">
-            <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} <span className="text-white font-semibold">Vayro.</span> All rights reserved.
-            </p>
-            <p className="mt-2 text-xs text-gray-500">contact@vayro.org</p>
-          </div>
-        </div>
-      </footer>
-    </main>  
-  );         
-}              
+       
 
 
 

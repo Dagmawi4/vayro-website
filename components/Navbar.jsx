@@ -1,54 +1,68 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [solid, setSolid] = useState(false);
   const [active, setActive] = useState("home");
+  const pathname = usePathname();
 
+  // Scroll-based background and section tracking (only for homepage)
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
 
-    // Track active section
-    const sections = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    sections.forEach((sec) => observer.observe(sec));
+    if (pathname === "/") {
+      const sections = document.querySelectorAll("section[id]");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) setActive(entry.target.id);
+          });
+        },
+        { threshold: 0.5 }
+      );
+      sections.forEach((sec) => observer.observe(sec));
+      return () => {
+        window.removeEventListener("scroll", onScroll);
+        sections.forEach((sec) => observer.unobserve(sec));
+      };
+    } else {
+      return () => window.removeEventListener("scroll", onScroll);
+    }
+  }, [pathname]);
 
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      sections.forEach((sec) => observer.unobserve(sec));
-    };
-  }, []);
+  // Link component with active style
+  const NavLink = ({ href, label }) => {
+    const isPageLink = !href.startsWith("#");
+    const isActive =
+      (isPageLink && pathname === href) ||
+      (!isPageLink && pathname === "/" && active === href.replace("#", ""));
 
-  const NavLink = ({ href, children }) => {
-    const isActive = active === href.replace("#", "");
-    return (
+    const linkClass = `relative px-3 py-2 text-sm font-medium transition ${
+      isActive ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
+    }`;
+
+    const underlineClass = `absolute left-0 -bottom-0.5 h-[2px] w-full rounded-full transition-all ${
+      isActive ? "bg-blue-600" : "bg-transparent group-hover:bg-blue-200"
+    }`;
+
+    // Internal page navigation uses Next.js Link
+    return isPageLink ? (
+      <Link href={href} onClick={() => setOpen(false)} className={linkClass}>
+        {label}
+        <span className={underlineClass} />
+      </Link>
+    ) : (
       <a
         href={href}
         onClick={() => setOpen(false)}
-        className={`relative px-3 py-2 text-sm font-medium transition ${
-          isActive
-            ? "text-blue-600"
-            : "text-gray-700 hover:text-blue-600"
-        }`}
+        className={linkClass}
       >
-        {children}
-        {/* underline animation */}
-        <span
-          className={`absolute left-0 -bottom-0.5 h-[2px] w-full rounded-full transition-all ${
-            isActive ? "bg-blue-600" : "bg-transparent group-hover:bg-blue-200"
-          }`}
-        />
+        {label}
+        <span className={underlineClass} />
       </a>
     );
   };
@@ -61,34 +75,33 @@ export default function Navbar() {
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <img
             src="/vayro-logo.png"
             alt="Vayro Logo"
-            className="h-14 w-auto object-contain" // ✅ larger so text inside logo is clear
+            className="h-14 w-auto object-contain"
           />
-        </a>
+        </Link>
 
-
-        {/* Desktop nav */}
+        {/* Desktop navigation */}
         <div className="hidden md:flex items-center gap-1 group">
-          <NavLink href="#home">Home</NavLink>
-          <NavLink href="#features">Features</NavLink>
-          <NavLink href="#demo">Demo</NavLink>
-          <NavLink href="#faq">FAQ</NavLink>
-          <NavLink href="#coming-soon">Coming&nbsp;Soon</NavLink>
-          <NavLink href="#about">About</NavLink>
+          <NavLink href="/" label="Home" />
+          <NavLink href="/#features" label="Features" />
+          <NavLink href="/#demo" label="Demo" />
+          <NavLink href="/#faq" label="FAQ" />
+          <NavLink href="/#coming-soon" label="Coming Soon" />
+          <NavLink href="/about" label="About" />
         </div>
 
-        {/* CTA */}
-        <a
-          href="#waitlist"
+        {/* CTA button */}
+        <Link
+          href="/#waitlist"
           className="hidden md:inline-flex rounded-lg bg-blue-600 text-white text-sm font-semibold px-4 py-2 hover:bg-blue-700 shadow-sm"
         >
           Get Early Access
-        </a>
+        </Link>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu toggle */}
         <button
           className="md:hidden p-2 rounded-lg border border-gray-200"
           onClick={() => setOpen((s) => !s)}
@@ -100,24 +113,29 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile panel */}
+      {/* Mobile dropdown */}
       {open && (
         <div className="md:hidden border-t border-gray-100 bg-white shadow-lg">
           <div className="px-4 py-3 flex flex-col space-y-2">
             {[
-              { href: "#home", label: "Home" },
-              { href: "#features", label: "Features" },
-              { href: "#demo", label: "Demo" },
-              { href: "#faq", label: "FAQ" },
-              { href: "#coming-soon", label: "Coming Soon" },
-              { href: "#about", label: "About" },
+              { href: "/", label: "Home" },
+              { href: "/#features", label: "Features" },
+              { href: "/#demo", label: "Demo" },
+              { href: "/#faq", label: "FAQ" },
+              { href: "/#coming-soon", label: "Coming Soon" },
+              { href: "/about", label: "About" },
             ].map((link, i) => {
-              const isActive = active === link.href.replace("#", "");
+              const isPageLink = !link.href.startsWith("#");
+              const isActive =
+                (isPageLink && pathname === link.href) ||
+                (!isPageLink &&
+                  pathname === "/" &&
+                  active === link.href.replace("#", ""));
               return (
-                <a
+                <Link
                   key={i}
-                  onClick={() => setOpen(false)}
                   href={link.href}
+                  onClick={() => setOpen(false)}
                   className={`block rounded-lg px-4 py-3 text-base font-medium transition ${
                     isActive
                       ? "bg-blue-50 text-blue-600"
@@ -125,19 +143,20 @@ export default function Navbar() {
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               );
             })}
-            <a
+            <Link
+              href="/#waitlist"
               onClick={() => setOpen(false)}
-              href="#waitlist"
               className="mt-2 rounded-lg bg-blue-600 text-white px-4 py-3 text-center font-semibold hover:bg-blue-700 shadow"
             >
               Get Early Access
-            </a>
+            </Link>
           </div>
         </div>
       )}
     </header>
   );
 }
+
