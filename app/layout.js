@@ -22,7 +22,7 @@ export const metadata = {
     icon: "/favicon.ico",
   },
   alternates: {
-    canonical: "https://vayro.org", // ✅ Canonical Tag (handled automatically)
+    canonical: "https://vayro.org", // ✅ canonical tag generated automatically
   },
   openGraph: {
     title: "Vayro – Smarter Travel, Simplified",
@@ -49,10 +49,11 @@ export const metadata = {
     images: ["/og-image.png"],
   },
   robots: {
-    index: true, // ✅ Allow indexing
-    follow: true, // ✅ Allow crawling links
+    index: true,
+    follow: true,
   },
 };
+
 
 export default function RootLayout({ children }) {
   return (
