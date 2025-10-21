@@ -14,11 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://vayro.org"),
   title: "Vayro – AI-Powered Travel Planner",
   description:
     "Plan end-to-end trips effortlessly with Vayro — an AI-powered travel planner that combines flights, stays, and personalized itineraries in one place.",
   icons: {
     icon: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "https://vayro.org", // ✅ Canonical Tag (handled automatically)
   },
   openGraph: {
     title: "Vayro – Smarter Travel, Simplified",
@@ -44,20 +48,15 @@ export const metadata = {
       "Your AI-powered travel planner for seamless trips — flights, stays, and itineraries all in one place.",
     images: ["/og-image.png"],
   },
-  metadataBase: new URL("https://vayro.org"),
+  robots: {
+    index: true, // ✅ Allow indexing
+    follow: true, // ✅ Allow crawling links
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* ✅ Canonical Tag for SEO */}
-        <link rel="canonical" href="https://vayro.org" />
-
-        {/* ✅ Allow indexing (just in case robots blocked earlier) */}
-        <meta name="robots" content="index, follow" />
-      </head>
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
@@ -68,5 +67,6 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 
 
