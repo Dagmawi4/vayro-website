@@ -45,6 +45,13 @@ export const metadata = {
     images: ["/og-image.png"],
   },
   metadataBase: new URL("https://www.vayro.org"),
+
+  // ✅ Explicitly allow indexing and following
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+  },
 };
 
 export default function RootLayout({ children }) {
