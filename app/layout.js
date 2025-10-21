@@ -24,7 +24,7 @@ export const metadata = {
     title: "Vayro – Smarter Travel, Simplified",
     description:
       "Vayro helps you build your perfect trip in seconds — from flights to day-by-day itineraries, powered by AI.",
-    url: "https://www.vayro.org",
+    url: "https://vayro.org",
     siteName: "Vayro",
     images: [
       {
@@ -44,32 +44,29 @@ export const metadata = {
       "Your AI-powered travel planner for seamless trips — flights, stays, and itineraries all in one place.",
     images: ["/og-image.png"],
   },
-  metadataBase: new URL("https://www.vayro.org"),
-
-  // ✅ Explicitly allow indexing and following
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-  },
+  metadataBase: new URL("https://vayro.org"),
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Canonical Tag for SEO */}
+        <link rel="canonical" href="https://vayro.org" />
+
+        {/* ✅ Allow indexing (just in case robots blocked earlier) */}
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
-        {/* ✅ Global Navbar */}
         <Navbar />
-
-        {/* ✅ Page content */}
         <main className="pt-20">{children}</main>
-
-        {/* ✅ Global Footer */}
         <Footer />
       </body>
     </html>
   );
 }
+
 
