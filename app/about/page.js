@@ -24,7 +24,7 @@ export default function AboutPage() {
             Travel planning has always been messy. Between flights, hotels, rides,
             and activities, travelers spend hours bouncing between apps, comparing
             endless tabs, and juggling spreadsheets. I experienced that firsthand
-            during one of my trips — what should have been a relaxing adventure turned
+            during one of my trips what should have been a relaxing adventure turned
             into a logistical nightmare. That frustration sparked a realization:
             <span className="font-semibold text-gray-800"> there had to be a smarter way to plan travel.</span>
           </p>
@@ -43,12 +43,12 @@ export default function AboutPage() {
             </span>{" "}
             No hidden agendas, no affiliate priorities, and no paid placements.
             We&apos;re building a product that listens, learns, and adapts to your style
-            of travel — whether you&apos;re an explorer, dreamer, or digital nomad.
+            of travel whether you&apos;re an explorer, dreamer, or digital nomad.
           </p>
 
           <p className="mt-6 text-lg text-gray-600 leading-relaxed text-justify">
             Vayro is not just another travel tool. It&apos;s a movement toward unbiased,
-            effortless, and human-centered trip planning — where your journey begins
+            effortless, and human-centered trip planning where your journey begins
             with inspiration, not frustration.
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function AboutPage() {
               {
                 icon: "🎯",
                 title: "Traveler First",
-                desc: "Every feature we design starts with one question — how does this make travel easier, smoother, and more personal for the traveler?",
+                desc: "Every feature we design starts with one question: How does this make travel easier, smoother, and more personal for the traveler?",
               },
               {
                 icon: "🔍",
@@ -75,7 +75,7 @@ export default function AboutPage() {
               {
                 icon: "💡",
                 title: "Innovation",
-                desc: "We constantly explore new ways AI can simplify the travel experience — from real-time adjustments to proactive recommendations.",
+                desc: "We constantly explore new ways AI can simplify the travel experience from real-time adjustments to proactive recommendations.",
               },
             ].map((v, i) => (
               <div
@@ -96,8 +96,8 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Our Mission</h2>
           <p className="text-lg md:text-xl leading-relaxed text-blue-50">
-            To build the world&apos;s first AI-native, traveler-first planning platform
-            — one that makes personalized, unbiased, and accessible trip planning
+            To build the world&apos;s first AI-native, traveler-first planning platform,
+             one that makes personalized, unbiased, and accessible trip planning
             a reality for everyone.
           </p>
         </div>
@@ -117,12 +117,12 @@ export default function AboutPage() {
               className="w-36 h-36 rounded-full mx-auto object-cover border-4 border-blue-100 shadow-md"
             />
             <h3 className="mt-6 text-2xl font-semibold text-gray-900">Dagmawi Abera</h3>
-            <p className="text-blue-600 font-medium">Founder &amp; Builder of Vayro</p>
+            <p className="text-blue-600 font-medium">Founder &amp; Cheif Executive Officer of Vayro</p>
             <p className="mt-4 text-gray-600 leading-relaxed text-base">
               Passionate about using technology to simplify the way people experience
               the world. With a background in computer engineering and a lifelong
               love for exploration, Dagmawi built Vayro to bridge the gap between
-              inspiration and real-world travel — making it smarter, easier, and
+              inspiration and real-world travel making it smarter, easier, and
               deeply personal.
             </p>
           </div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               The idea for Vayro came to me during my third trip to Las Vegas. My first two visits were for conferences, 
-              but this time, I wanted to truly explore — to see the city beyond the bright lights and hotel halls. 
+              but this time, I wanted to truly explore and see the city beyond the bright lights and hotel halls. 
               Vegas has endless things to do, but without an organized, personalized plan, I found myself overwhelmed. 
               I spent hours scrolling through YouTube videos, TikToks, and random blogs, trying to piece together 
               the perfect trip, only to realize I was spending more time planning than living the experience itself.
@@ -144,19 +144,19 @@ export default function AboutPage() {
               What should have been a fun adventure turned into a frustrating puzzle. I jumped between apps, compared 
               flights and hotels, checked a dozen restaurant reviews, and kept switching between tabs. By the time I 
               finished organizing my day, the excitement was gone. When I finally returned home, I couldn&apos;t stop 
-              thinking — travel is supposed to be freeing, not stressful. There had to be a better way.
+              thinking, travel is supposed to be freeing, not stressful. There had to be a better way.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              That&apos;s when the seed for Vayro was planted. I imagined an app that could do what no platform truly did — 
+              That&apos;s when the seed for Vayro was planted. I imagined an app that could do what no platform truly did 
               understand the traveler. An app that could take your preferences, your time, your budget, and your mood, 
-              and turn them into a trip that feels made for you. Even its name, &quot;Vayro,&quot; — a blend of &quot;Voyage&quot; and &quot;Aero&quot; — 
+              and turn them into a trip that feels made for you. Even its name, &quot;Vayro,&quot; a blend of &quot;Voyage&quot; and &quot;Aero&quot; 
               symbolizes exploration powered by intelligence.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
               From the start, I promised myself one thing: Vayro would never be just another travel app chasing 
-              affiliate links or commissions. It would be built for people like me — explorers, dreamers, planners, 
+              affiliate links or commissions. It would be built for people like me, explorers, dreamers, planners, 
               and wanderers who want to experience the world without the headache. Travel should be about the moments 
               you create, not the tabs you keep open. That&apos;s what Vayro is about: helping people spend less time planning, 
               and more time living.
