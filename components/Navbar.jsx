@@ -49,18 +49,13 @@ export default function Navbar() {
       isActive ? "bg-blue-600" : "bg-transparent group-hover:bg-blue-200"
     }`;
 
-    // Internal page navigation uses Next.js Link
     return isPageLink ? (
       <Link href={href} onClick={() => setOpen(false)} className={linkClass}>
         {label}
         <span className={underlineClass} />
       </Link>
     ) : (
-      <a
-        href={href}
-        onClick={() => setOpen(false)}
-        className={linkClass}
-      >
+      <a href={href} onClick={() => setOpen(false)} className={linkClass}>
         {label}
         <span className={underlineClass} />
       </a>
@@ -89,6 +84,7 @@ export default function Navbar() {
           <NavLink href="/#features" label="Features" />
           <NavLink href="/#demo" label="Demo" />
           <NavLink href="/#faq" label="FAQ" />
+          <NavLink href="/#feedback" label="Feedback" />
           <NavLink href="/#coming-soon" label="Coming Soon" />
           <NavLink href="/about" label="About" />
         </div>
@@ -122,6 +118,7 @@ export default function Navbar() {
               { href: "/#features", label: "Features" },
               { href: "/#demo", label: "Demo" },
               { href: "/#faq", label: "FAQ" },
+              { href: "/#feedback", label: "Feedback" },
               { href: "/#coming-soon", label: "Coming Soon" },
               { href: "/about", label: "About" },
             ].map((link, i) => {

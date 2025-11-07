@@ -151,7 +151,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-center">
             Why choose <span className="text-blue-600">Vayro</span>
           </h2>
-        <p className="mt-3 text-center text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 text-center text-gray-600 max-w-2xl mx-auto">
             Traveler-first and AI-native. Hyper-personalized plans without affiliate bias.
           </p>
 
@@ -256,6 +256,147 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== Tester Feedback (Enhanced, First-Person) ===== */}
+      <section id="feedback" className="py-24 relative">
+        {/* Soft gradient backdrop */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50 via-white to-blue-50" />
+
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900">
+            Early Tester Feedback
+          </h2>
+          <p className="mt-3 text-center text-gray-600 max-w-2xl mx-auto">
+            Real quotes from our private beta sessions. What they loved and what they want next.
+          </p>
+
+          {/* Cards */}
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Natnael Minuta",
+                quote:
+                  "I planned a Seattle trip and loved how easy it was to save recommendations. The itinerary felt spot-on and detailed, and Travel Circle made group planning feel natural. I’d pay for this.",
+                improve: [
+                  "Let Vira remember my saved trip details and sync with my preferences.",
+                  "Make the Saved pages UI even more polished."
+                ],
+              },
+              {
+                name: "Nahom Zewdu",
+                quote:
+                  "I used Vayro after moving to Baltimore to compare flights, transport, and plan my first weeks. The transport guidance from airport to destination was clutch cost and time trade-offs were crystal clear.",
+                improve: [
+                  "Show more visual previews of places and neighborhoods in results."
+                ],
+              },
+              {
+                name: "Miguel Ladino",
+                quote:
+                  "I’m heading to Las Vegas for a January conference. Vayro’s flight personalization helped me decide, and the PDF itinerary download is perfect for offline. It already feels end-to-end.",
+                improve: [
+                  "Add in-app booking for flights so I don’t have to jump out."
+                ],
+              },
+              {
+                name: "Million Bayissa",
+                quote:
+                  "Vira’s quick, conversational answers were super helpful, and the day-by-day budget estimates were impressively precise. It felt like planning with a smart teammate.",
+                improve: [
+                  "A dedicated travel wallet to load budgeted funds and spend in-app."
+                ],
+              },
+              {
+                name: "Rediet Abera",
+                quote:
+                  "My itinerary felt truly mine dietary preferences and activities were respected without extra tweaking. The flow from search to plan felt intuitive.",
+                improve: [
+                  "Calendar sync with smart notifications so I never miss anything."
+                ],
+              },
+              {
+                name: "Osam Hassen",
+                quote:
+                  "I tried Vayro in Ethiopia and was surprised how well it personalized things internationally. It didn’t feel US-only that matters.",
+                improve: [
+                  "Improve local place/address accuracy in certain regions."
+                ],
+              },
+            ].map((f, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.35, delay: i * 0.04 }}
+                className="group relative rounded-2xl bg-white/80 backdrop-blur border border-gray-100 shadow-sm hover:shadow-md transition-all"
+                role="article"
+                aria-label={`Feedback from ${f.name}`}
+              >
+                {/* Decorative top line */}
+                <div className="h-1.5 rounded-t-2xl bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-500" />
+
+                <div className="p-6 flex flex-col h-full">
+                  {/* Quote glyph */}
+                  <div className="flex items-start gap-3">
+                    <div className="shrink-0 text-3xl leading-none text-blue-200 group-hover:text-blue-300 transition">
+                      ❝
+                    </div>
+                    <p className="text-gray-800 italic leading-relaxed">
+                      {f.quote}
+                    </p>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="my-5 border-t border-gray-100" />
+
+                  {/* Improvements */}
+                  <div>
+                    <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1">
+                      <span className="text-base leading-none">💡</span>
+                      What I’d love next
+                    </div>
+                    <ul className="mt-3 space-y-2">
+                      {f.improve.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                          <span className="mt-1.5 inline-block h-1.5 w-1.5 rounded-full bg-blue-600"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <span className="font-semibold text-gray-900">{f.name}</span>
+                    <span className="text-blue-600/80 text-xs font-medium uppercase tracking-wide">
+                      Private Beta
+                    </span>
+                  </div>
+                </div>
+
+                {/* Hover ring */}
+                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-hover:ring-1 group-hover:ring-blue-200 transition" />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Subnote */}
+          <div className="mt-10 text-center">
+            <p className="text-gray-500 text-sm">
+              These insights guide our next sprints from memory and calendar sync to localization and booking.
+            </p>
+            <a
+              href="#waitlist"
+              className="inline-flex mt-4 rounded-lg bg-blue-600 text-white text-sm font-semibold px-5 py-3 hover:bg-blue-700 shadow-sm"
+            >
+              Join the Private Beta
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* ===== Coming Soon ===== */}
       <section id="coming-soon" className="py-24 relative bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -315,6 +456,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
